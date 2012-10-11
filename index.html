@@ -1,0 +1,154 @@
+<!doctype html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="chrome=1">
+    <title>PDF to HTML Converter by deathlord87</title>
+
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <script src="javascripts/scale.fix.js"></script>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+  </head>
+  <body>
+    <div class="wrapper">
+      <header>
+        <h1 class="header">PDF to HTML Converter</h1>
+        <p class="header">Shell.JS backend for converting PDF files to a single HTML outputs</p>
+
+        <ul>
+          <li class="download"><a class="buttons" href="https://github.com/deathlord87/pdf2htmlEX_server/zipball/master">Download ZIP</a></li>
+          <li class="download"><a class="buttons" href="https://github.com/deathlord87/pdf2htmlEX_server/tarball/master">Download TAR</a></li>
+          <li><a class="buttons github" href="https://github.com/deathlord87/pdf2htmlEX_server">View On GitHub</a></li>
+        </ul>
+
+        <p class="header">This project is maintained by <a class="header name" href="https://github.com/deathlord87">deathlord87</a></p>
+
+
+      </header>
+      <section>
+        <h1>Introduction</h1>
+
+<p>A system that will accept a multipart form upload and load execute a pdf2htmlEX executable, 
+to convert a pdf to an html document.</p>
+
+<h2>Usage</h2>
+
+<pre><code>$&gt;shjs server.js
+</code></pre>
+
+<h2>Specification</h2>
+
+<p>When the user picks a file from their computer and the form is submitted, the
+upload begins. While uploading, the status text paragraph should be updating
+with the current percentage complete at least once every 2 seconds. While
+uploading, the user should be able to enter text into the title text field.</p>
+
+<p>When the upload completes, the pdf2htmlEX executable is triggered and
+the status text should display the path on the server to the saved file, 
+and the current value of the title text field should be posted to the server. 
+The response to the form post request should display both the title and the path 
+to the file.</p>
+
+<h2>Features</h2>
+
+<ul>
+<li>To get all the list of files uploaded and converted access api
+    * http://host:port/get_list</li>
+<li>To download the file access api
+    * http://host:port/output/yourfile.html (Got from the above api) </li>
+</ul><h2>Installation Notes</h2>
+
+<ul>
+<li>Step 1 
+
+<ul>
+<li>Install Macports      -   for mac </li>
+<li>Install yum,apt-get etc   -   for linux<br>
+</li>
+</ul>
+</li>
+<li>Step 2<br>
+    *  Install GCC &gt; 4.4.6 and above
+    *  Select GCC 4.7(preffered)  and above using    - $sudo port select --list gcc<br>
+</li>
+<li>Step 3 : Install CMake,make,pkg-config</li>
+<li>Step 4 : Install poppler 0.20.4 +</li>
+<li>Step 5 : Install fontforge</li>
+<li>Step 6 : Install pdftohtmlEX<br>
+</li>
+<li>Step 7 : After Compilation test completely for pdf-html conversion.</li>
+</ul><h2>Dependancies</h2>
+
+<p><a href="https://github.com/arturadib/shelljs"><strong>Shell.js</strong></a></p>
+
+<p><a href="https://github.com/felixge/node-formidable"><strong>formidable.js</strong></a></p>
+
+<p><a href="https://github.com/felixge/node-paperboy"><strong>paperboy.js</strong></a></p>
+
+<p><a href="https://github.com/coolwanglu/pdf2htmlEX"><strong>pdf2htmlEX and its dependancies</strong></a></p>
+
+<h2>FAQ's</h2>
+
+<ul>
+<li>Incase your compiler doesnt support round function, Edit the round code in text.cc in pdf2htmlEX to create a function like below.</li>
+</ul><pre><code>   int round(double number){
+        return (number &gt;= 0) ? (int)(number + 0.5) : (int)(number - 0.5);
+   }
+</code></pre>
+
+<ul>
+<li>To select the preferred gcc,
+
+<ul>
+<li>Use $sudo port select -list gcc</li>
+<li>$sudo port select -set gcc</li>
+</ul>
+</li>
+</ul><h2>Copyrights</h2>
+
+<p>(The MIT License)</p>
+
+<p>Copyright (c) 2012 Lalith Balasubramanian (ICRL)</p>
+
+<p>Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:</p>
+
+<p>The above copyright notice and this permission notice shall be included in
+all copies or substantial portions of the Software.</p>
+
+<p>THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN
+THE SOFTWARE.</p>
+
+<h2>Contact</h2>
+
+<ul>
+<li>Lalith Balasubramanian <a href="mailto:lalith87@gmail.com">lalith87@gmail.com</a>
+
+<ul>
+<li>Suggestions and questions are <strong>welcome</strong>. </li>
+<li>Please use the <strong>latest master branch</strong>.</li>
+</ul>
+</li>
+</ul>
+      </section>
+      <footer>
+        <p><small>Hosted on <a href="https://pages.github.com">GitHub Pages</a> using the Dinky theme</small></p>
+      </footer>
+    </div>
+    <!--[if !IE]><script>fixScale(document);</script><![endif]-->
+		
+  </body>
+</html>
