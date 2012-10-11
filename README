@@ -1,13 +1,15 @@
+#Introduction
+
 A system that will accept a multipart form upload and load execute a pdf2htmlEX executable, 
 to convert a pdf to an html document.
 
 
-Usage:
+## Usage:
 
 $> shjs server.js
 
 
-Specification:
+## Specification:
 
 When the user picks a file from their computer and the form is submitted, the
 upload begins. While uploading, the status text paragraph should be updating
@@ -21,7 +23,7 @@ The response to the form post request should display both the title and the path
 to the file.
 
 
-Installation Notes:
+## Installation Notes:
 
 Step 1 : Install Macports					-- NEAT PACKAGE TOOL SIMILAR TO YUM/APT-GET 
 	   : Install yum,apt-get etc 			-- for linux
@@ -46,15 +48,14 @@ Step 6 : Install pdftohtmlEX				-- EXTENDED HTML CONVERSION WITH CSS SUPPORT
 	   
 Step 7 : After Compilation test completely for pdf-html conversion.
 
-Dependancies :
+## Dependancies :
 
-Shell.js 		-		https://github.com/arturadib/shelljs
-formidable.js	-		https://github.com/felixge/node-formidable
-paperboy.js		-		https://github.com/felixge/node-paperboy
-pdf2htmlEX and  -		https://github.com/coolwanglu/pdf2htmlEX
-its dependancies
+[**Shell.js**](https://github.com/arturadib/shelljs)
+[**formidable.js**](https://github.com/felixge/node-formidable)
+[**paperboy.js**](https://github.com/felixge/node-paperboy)
+[**pdf2htmlEX and its dependancies**](https://github.com/coolwanglu/pdf2htmlEX)
 
-Copyrights :
+## Copyrights :
 
 (The MIT License)
 
