@@ -53,9 +53,11 @@ to the file.
 
 * Incase your compiler doesnt support round function, Edit the round code in text.cc in pdf2htmlEX to create a function like below.
 
-    int round(double number){
-    	return (number >= 0) ? (int)(number + 0.5) : (int)(number - 0.5);
-    }
+##
+
+       int round(double number){
+         	return (number >= 0) ? (int)(number + 0.5) : (int)(number - 0.5);
+       }
 
 * To select the preferred gcc,
 
