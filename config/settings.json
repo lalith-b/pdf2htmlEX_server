@@ -1,0 +1,7 @@
+{
+	"install_path": "/user/Desktop/pdf2htmlEX_Server/",
+	"output_folder":"/user/Desktop/pdf2htmlEX_Server/public/output/",
+	"conversion_params":["--space-as-offset 1","--tounicode -1","--fit-width 768"],
+	"host": "127.0.0.1",
+	"port": 8000
+}
