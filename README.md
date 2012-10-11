@@ -21,6 +21,13 @@ and the current value of the title text field should be posted to the server.
 The response to the form post request should display both the title and the path 
 to the file.
 
+## Features
+
+* To get all the list of files uploaded and converted access api
+  * http://host:port/get_list
+
+* To download the file access api
+  * http://host:port/output/yourfile.html (Got from the above api) 
 
 ## Installation Notes
 
